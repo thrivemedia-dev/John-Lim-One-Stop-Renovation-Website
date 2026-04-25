@@ -1,0 +1,3022 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Lim One Stop Renovation - 一站式现代前卫家装专家</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Noto+Sans+SC:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* 大自然褐色系 + 深灰配色 */
+    --brown-50: #FAF6F1;
+    --brown-100: #F0E8DC;
+    --brown-200: #E0D0B8;
+    --brown-300: #C9B192;
+    --brown-400: #A88968;
+    --brown-500: #8B6B47;
+    --brown-600: #6F5438;
+    --brown-700: #554028;
+    --brown-800: #3D2E1C;
+    --brown-900: #261C11;
+
+    --gray-50: #F5F5F5;
+    --gray-100: #E5E5E5;
+    --gray-200: #D4D4D4;
+    --gray-300: #A3A3A3;
+    --gray-400: #737373;
+    --gray-500: #525252;
+    --gray-600: #404040;
+    --gray-700: #2A2A2A;
+    --gray-800: #1C1C1C;
+    --gray-900: #0F0F0F;
+
+    --accent: #8B6B47;
+    --accent-light: #A88968;
+    --accent-dark: #554028;
+
+    --whatsapp: #25D366;
+    --whatsapp-dark: #1EA952;
+
+    --success: #4A7C59;
+
+    --font-display: 'Fraunces', 'Noto Sans SC', serif;
+    --font-body: 'Inter', 'Noto Sans SC', sans-serif;
+    --font-cn: 'Noto Sans SC', sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--gray-800);
+    background: var(--brown-50);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* === Image Placeholder Frame === */
+  .img-placeholder {
+    background: linear-gradient(135deg, var(--brown-100) 0%, var(--brown-200) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown-500);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 2px dashed var(--brown-300);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(45deg, transparent 48%, var(--brown-200) 48%, var(--brown-200) 52%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, var(--brown-200) 48%, var(--brown-200) 52%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+  }
+
+  .img-placeholder-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .img-placeholder-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* === Navigation === */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(250, 246, 241, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--brown-200);
+    z-index: 1000;
+    padding: 1.25rem 0;
+  }
+
+  .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--brown-800);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .brand .brand-accent {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--brown-800);
+  }
+
+  /* === Hero Section === */
+  .hero {
+    padding: 8rem 2rem 5rem;
+    background: linear-gradient(180deg, var(--brown-50) 0%, var(--brown-100) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 30%, var(--brown-200) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, var(--brown-300) 0%, transparent 40%);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--brown-100);
+    border: 1px solid var(--brown-300);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--brown-700);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+  }
+
+  .hero-title {
+    font-family: var(--font-cn);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--gray-900);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title-accent {
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gray-700);
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 14px rgba(139, 107, 71, 0.3);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 107, 71, 0.4);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: var(--gray-800);
+    border: 1.5px solid var(--brown-300);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .btn-whatsapp {
+    background: var(--whatsapp);
+    color: white;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-whatsapp:hover {
+    background: var(--whatsapp-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--brown-200);
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--brown-800);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-weight: 500;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+  }
+
+  .hero-image {
+    aspect-ratio: 4/5;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .hero-float-card {
+    position: absolute;
+    bottom: 2rem;
+    left: -2rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(61, 46, 28, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--brown-100);
+  }
+
+  .float-card-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--brown-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .float-card-text {
+    font-size: 0.9rem;
+  }
+
+  .float-card-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.15rem;
+  }
+
+  .float-card-sub {
+    color: var(--gray-500);
+    font-size: 0.8rem;
+  }
+
+  /* === Trust Bar === */
+  .trust-bar {
+    background: var(--gray-800);
+    color: white;
+    padding: 1.25rem 2rem;
+  }
+
+  .trust-bar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .trust-item-icon {
+    color: var(--brown-300);
+    font-size: 1.1rem;
+  }
+
+  /* === Section Base === */
+  section {
+    padding: 6rem 2rem;
+  }
+
+  .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: var(--font-cn);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* === Services Section === */
+  .services {
+    background: white;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--brown-50);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid var(--brown-100);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(61, 46, 28, 0.12);
+    border-color: var(--brown-300);
+  }
+
+  .service-card-featured {
+    border: 2px solid var(--accent);
+    position: relative;
+  }
+
+  .service-image {
+    aspect-ratio: 4/3;
+    position: relative;
+  }
+
+  .service-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    z-index: 2;
+  }
+
+  .service-content {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-title {
+    font-family: var(--font-cn);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-title-en {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    font-family: var(--font-display);
+  }
+
+  .service-desc {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .service-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+  }
+
+  .service-features li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .service-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .btn-service {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-whatsapp-icon {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* === Why Choose Us === */
+  .why-us {
+    background: var(--brown-50);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-us::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--brown-200) 0%, transparent 70%);
+    opacity: 0.5;
+  }
+
+  .why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .why-us-images {
+    position: relative;
+    height: 600px;
+  }
+
+  .why-img-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+  }
+
+  .why-img-second {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    border: 6px solid var(--brown-50);
+  }
+
+  .why-badge-float {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 3;
+    box-shadow: 0 8px 20px rgba(139, 107, 71, 0.3);
+  }
+
+  .why-stat-float {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(61, 46, 28, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 3;
+  }
+
+  .why-us-content {
+    padding-left: 1rem;
+  }
+
+  .why-us-content .section-header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+
+  .why-us-content .section-subtitle {
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--brown-100);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 1.25rem;
+  }
+
+  .feature-text-title {
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+  }
+
+  .feature-text-desc {
+    color: var(--gray-600);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* === Process Section === */
+  .process {
+    background: white;
+  }
+
+  .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    text-align: center;
+    position: relative;
+    padding: 2rem 1rem;
+  }
+
+  .process-num {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.25rem;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--brown-600) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(139, 107, 71, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .process-step:not(:last-child) .process-num::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(100% + 1rem);
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--brown-300) 0, var(--brown-300) 6px, transparent 6px, transparent 12px);
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  .process-title {
+    font-family: var(--font-cn);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .process-desc {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+
+  /* === Portfolio === */
+  .portfolio {
+    background: var(--gray-800);
+    color: white;
+  }
+
+  .portfolio .section-title {
+    color: white;
+  }
+
+  .portfolio .section-subtitle {
+    color: var(--gray-300);
+  }
+
+  .portfolio .section-label {
+    color: var(--brown-300);
+  }
+
+  .portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    border: 1px solid var(--gray-600);
+    color: var(--gray-300);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .portfolio-item {
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 4/3;
+    transition: transform 0.4s ease;
+  }
+
+  .portfolio-item:hover {
+    transform: scale(1.02);
+  }
+
+  .portfolio-item-large {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+  }
+
+  .portfolio-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--brown-300);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-item-title {
+    font-family: var(--font-cn);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .portfolio-item-sub {
+    font-size: 0.85rem;
+    color: var(--gray-300);
+  }
+
+  /* Before/After Comparison */
+  .portfolio-compare {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    position: relative;
+  }
+
+  .compare-side {
+    position: relative;
+  }
+
+  .compare-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    z-index: 3;
+    text-transform: uppercase;
+  }
+
+  .compare-label.after {
+    background: var(--accent);
+  }
+
+  /* === Coverage Section === */
+  .coverage {
+    background: var(--brown-50);
+  }
+
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .coverage-content .section-header {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .coverage-content .section-subtitle {
+    margin: 0 0 2rem;
+  }
+
+  .area-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .area-tag {
+    padding: 0.6rem 1.3rem;
+    background: white;
+    border: 1.5px solid var(--brown-300);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--brown-700);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .area-tag:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .area-tag-primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  .coverage-image-wrapper {
+    position: relative;
+  }
+
+  .coverage-image {
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+  }
+
+  .coverage-float {
+    position: absolute;
+    bottom: 1.5rem;
+    right: -1rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(61, 46, 28, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .coverage-float-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  /* === Testimonials === */
+  .testimonials {
+    background: white;
+  }
+
+  .rating-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .stars {
+    color: #FFB800;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  .rating-text {
+    font-size: 1rem;
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .testimonial-card {
+    background: var(--brown-50);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--brown-100);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(61, 46, 28, 0.08);
+  }
+
+  .testimonial-quote {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    line-height: 1;
+  }
+
+  .testimonial-stars {
+    color: #FFB800;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .testimonial-text {
+    color: var(--gray-700);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+    font-size: 0.95rem;
+  }
+
+  .testimonial-text-placeholder {
+    color: var(--gray-400);
+  }
+
+  .testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--brown-100);
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brown-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    border: 2px dashed var(--brown-300);
+  }
+
+  .testimonial-meta {
+    flex: 1;
+  }
+
+  .testimonial-name {
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+  }
+
+  .testimonial-role {
+    color: var(--gray-500);
+    font-size: 0.82rem;
+  }
+
+  .testimonial-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 auto;
+    padding: 1rem 1.75rem;
+    background: white;
+    border: 1.5px solid var(--brown-200);
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--gray-800);
+    width: fit-content;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .google-button:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* === Articles === */
+  .articles {
+    background: var(--brown-50);
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .article-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--brown-100);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(61, 46, 28, 0.1);
+  }
+
+  .article-image {
+    aspect-ratio: 16/10;
+  }
+
+  .article-content {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+  }
+
+  .article-category {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .article-title {
+    font-family: var(--font-cn);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--gray-400);
+    font-style: italic;
+  }
+
+  .article-title-placeholder {
+    color: var(--gray-400);
+    font-style: italic;
+  }
+
+  .article-excerpt {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex: 1;
+    font-style: italic;
+  }
+
+  .article-link {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.3s ease;
+  }
+
+  .article-card:hover .article-link {
+    gap: 0.75rem;
+  }
+
+  /* === FAQ === */
+  .faq {
+    background: white;
+  }
+
+  .faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--brown-50);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--brown-100);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item.open {
+    border-color: var(--accent);
+    background: white;
+    box-shadow: 0 8px 20px rgba(139, 107, 71, 0.08);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem 1.75rem;
+    background: transparent;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: inherit;
+  }
+
+  .faq-question-placeholder {
+    color: var(--gray-400);
+    font-style: italic;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--brown-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .faq-item.open .faq-icon {
+    background: var(--accent);
+    color: white;
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.75rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 1.75rem 1.5rem;
+  }
+
+  /* === Trust Logos === */
+  .trust-logos {
+    background: white;
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--brown-100);
+  }
+
+  .logos-label {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-400);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo-placeholder {
+    aspect-ratio: 2/1;
+    background: var(--brown-50);
+    border: 2px dashed var(--brown-200);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown-400);
+    font-size: 0.8rem;
+  }
+
+  /* === Contact === */
+  .contact {
+    background: var(--gray-800);
+    color: white;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact .section-header {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .contact .section-title {
+    color: white;
+  }
+
+  .contact .section-subtitle {
+    color: var(--gray-300);
+    margin: 0;
+  }
+
+  .contact-info {
+    margin-top: 2.5rem;
+  }
+
+  .contact-info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .contact-info-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--brown-700);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown-200);
+    flex-shrink: 0;
+  }
+
+  .contact-info-label {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-info-value {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    background: var(--gray-700);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--gray-600);
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-200);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--gray-800);
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-light);
+    background: var(--gray-900);
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: var(--gray-500);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 1.1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+
+  .form-submit:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(139, 107, 71, 0.4);
+  }
+
+  /* === Final CTA === */
+  .final-cta {
+    background: linear-gradient(135deg, var(--brown-700) 0%, var(--brown-900) 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, var(--brown-500) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, var(--accent) 0%, transparent 40%);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .final-cta-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .final-cta-title {
+    font-family: var(--font-cn);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .final-cta-sub {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .final-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--brown-800);
+  }
+
+  .btn-white:hover {
+    background: var(--brown-50);
+    transform: translateY(-2px);
+  }
+
+  .final-cta-checks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+  }
+
+  /* === Footer === */
+  footer {
+    background: var(--gray-900);
+    color: var(--gray-300);
+    padding: 5rem 2rem 2rem;
+  }
+
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--gray-700);
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-brand-accent {
+    color: var(--brown-300);
+    font-style: italic;
+  }
+
+  .footer-desc {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--gray-400);
+  }
+
+  .footer-contact {
+    margin-top: 1.5rem;
+  }
+
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.9rem;
+    color: var(--gray-300);
+  }
+
+  .footer-contact-item-placeholder {
+    color: var(--gray-500);
+    font-style: italic;
+  }
+
+  .footer-contact-icon {
+    color: var(--brown-300);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .footer-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
+    color: var(--gray-400);
+    font-size: 0.92rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--brown-300);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .footer-social-link {
+    width: 40px;
+    height: 40px;
+    background: var(--gray-800);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-700);
+  }
+
+  .footer-social-link:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-bottom-links a {
+    color: var(--gray-400);
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom-links a:hover {
+    color: var(--brown-300);
+  }
+
+  /* === Floating WhatsApp === */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--whatsapp);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+
+  .floating-whatsapp:hover {
+    background: var(--whatsapp-dark);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+  }
+
+  .floating-whatsapp::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 14px;
+    height: 14px;
+    background: #4ADE80;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  /* === Responsive === */
+  @media (max-width: 1024px) {
+    .hero-container,
+    .why-us-grid,
+    .coverage-grid,
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .why-us-content {
+      padding-left: 0;
+    }
+
+    .why-us-images {
+      height: 500px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-item-large,
+    .portfolio-compare {
+      grid-column: span 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+    }
+
+    section {
+      padding: 4rem 1.25rem;
+    }
+
+    .hero {
+      padding: 7rem 1.25rem 3rem;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .why-us-images {
+      height: 400px;
+    }
+
+    .floating-whatsapp {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-container {
+      padding: 0 1.25rem;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+    }
+
+    .hero-float-card {
+      left: 0;
+      right: 0;
+      margin: 0 1rem;
+    }
+
+    .final-cta-checks {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="brand">
+      John Lim <span class="brand-accent">One Stop</span> Renovation
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">服务项目</a></li>
+      <li><a href="#why-us">为什么选择我们</a></li>
+      <li><a href="#portfolio">作品展示</a></li>
+      <li><a href="#testimonials">客户评价</a></li>
+      <li><a href="#articles">文章</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>服务范围：吉隆坡 · 雪兰莪 · 芙蓉</span>
+      </div>
+      <h1 class="hero-title">
+        一站式<br>
+        <span class="hero-title-accent">现代前卫</span><br>
+        家装专家
+      </h1>
+      <p class="hero-subtitle">
+        我们用更实惠的价格，打造最新潮的居住空间。从设计到施工，一站式解决方案，让装修变得简单。
+      </p>
+      <div class="hero-checks">
+        <div class="hero-check">
+          <span class="check-icon">✓</span>
+          <span>4年行业经验</span>
+        </div>
+        <div class="hero-check">
+          <span class="check-icon">✓</span>
+          <span>自家工厂直营</span>
+        </div>
+        <div class="hero-check">
+          <span class="check-icon">✓</span>
+          <span>CIDB认证资质</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <span>📐</span> 免费咨询报价
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">
+          查看作品 →
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-value">4+</div>
+          <div class="stat-label">年行业经验</div>
+        </div>
+        <div>
+          <div class="stat-value">100%</div>
+          <div class="stat-label">自有工厂</div>
+        </div>
+        <div>
+          <div class="stat-value">CIDB</div>
+          <div class="stat-label">认证资质</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrapper">
+      <div class="hero-image img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🏠</span>
+          <div>Hero 主图</div>
+          <div style="font-size: 0.75rem; margin-top: 0.25rem; opacity: 0.7;">建议尺寸 800x1000px</div>
+        </div>
+      </div>
+      <div class="hero-float-card">
+        <div class="float-card-circle">4+</div>
+        <div class="float-card-text">
+          <div class="float-card-title">行业专业经验</div>
+          <div class="float-card-sub">自2020年起服务客户</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="trust-bar-container">
+    <div class="trust-item">
+      <span class="trust-item-icon">⭐</span>
+      <span>4年装修经验</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-item-icon">🏭</span>
+      <span>自家工厂直营</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-item-icon">🛡️</span>
+      <span>6个月工程保修</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-item-icon">✓</span>
+      <span>CIDB认证资质</span>
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">一站式家装服务，全程无忧</h2>
+      <p class="section-subtitle">
+        从设计概念到完工交付，我们提供七大核心服务，让您的家装之旅轻松无忧。
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🎨</span>
+            <div>室内设计图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">室内设计概念</h3>
+          <div class="service-title-en">Interior Design & 3D Visual</div>
+          <p class="service-desc">专业风格规划，提供3D视觉效果图，让您提前看到未来的家。</p>
+          <ul class="service-features">
+            <li>专业风格规划咨询</li>
+            <li>3D立体视觉效果图</li>
+            <li>空间色彩搭配建议</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🔨</span>
+            <div>拆除清理图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">拆除与清理</h3>
+          <div class="service-title-en">Demolition & Hacking</div>
+          <p class="service-desc">旧房翻新的基础工程，专业团队安全拆除，彻底清理现场。</p>
+          <ul class="service-features">
+            <li>旧房结构安全拆除</li>
+            <li>垃圾废料清理运输</li>
+            <li>施工现场保洁</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">⚡</span>
+            <div>水电工程图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">水电工程</h3>
+          <div class="service-title-en">Wiring & Plumbing</div>
+          <p class="service-desc">全屋电路布置、灯具安装、水管铺设，专业持证电工施工。</p>
+          <ul class="service-features">
+            <li>全屋电路重新布线</li>
+            <li>灯具与开关安装</li>
+            <li>冷热水管布置</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">💡</span>
+            <div>石膏天花图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">石膏天花</h3>
+          <div class="service-title-en">Plaster Ceiling</div>
+          <p class="service-desc">现代感石膏天花设计，包含隐藏灯带，打造高级氛围照明。</p>
+          <ul class="service-features">
+            <li>现代感天花造型设计</li>
+            <li>隐藏式LED灯带安装</li>
+            <li>多层次立体效果</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 - Featured -->
+      <div class="service-card service-card-featured">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🪵</span>
+            <div>定制木工图片</div>
+          </div>
+          <div class="service-badge">⭐ 招牌服务</div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">定制木工</h3>
+          <div class="service-title-en">Bespoke Carpentry</div>
+          <p class="service-desc"><strong>自有工厂直营</strong>，衣柜、橱柜、电视柜全部量身定制，品质与价格双重保障。</p>
+          <ul class="service-features">
+            <li>自有工厂生产，中间无差价</li>
+            <li>定制衣柜、橱柜、电视柜</li>
+            <li>多种板材与五金选择</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🏛️</span>
+            <div>地面墙面图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">地面与墙面</h3>
+          <div class="service-title-en">Flooring & Tiling</div>
+          <p class="service-desc">瓷砖铺贴、木地板安装、艺术漆施工，多种材质任您选择。</p>
+          <ul class="service-features">
+            <li>瓷砖与大理石铺贴</li>
+            <li>实木与复合地板安装</li>
+            <li>艺术漆与墙纸施工</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="service-card">
+        <div class="service-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🎨</span>
+            <div>油漆装饰图片</div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">油漆与装饰</h3>
+          <div class="service-title-en">Painting & Decoration</div>
+          <p class="service-desc">墙面美化，专业油漆施工，多种色彩搭配，打造理想空间。</p>
+          <ul class="service-features">
+            <li>内外墙专业油漆</li>
+            <li>环保涂料选择</li>
+            <li>色彩搭配咨询</li>
+          </ul>
+          <div class="service-actions">
+            <a href="#contact" class="btn btn-primary btn-service">了解更多</a>
+            <a href="#" class="btn btn-whatsapp btn-whatsapp-icon">💬</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us" id="why-us">
+  <div class="section-container">
+    <div class="why-us-grid">
+      <div class="why-us-images">
+        <div class="why-img-main img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">📸</span>
+            <div>团队工作照</div>
+          </div>
+        </div>
+        <div class="why-img-second img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🏭</span>
+            <div>工厂图片</div>
+          </div>
+        </div>
+        <div class="why-badge-float">✓ 自有工厂</div>
+        <div class="why-stat-float">
+          <div class="float-card-circle">4+</div>
+          <div class="float-card-text">
+            <div class="float-card-title">年专业经验</div>
+            <div class="float-card-sub">值得信赖</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-us-content">
+        <div class="section-header">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">为什么选择 John Lim？</h2>
+          <p class="section-subtitle">
+            年轻专业的团队，领先的设计理念，加上自有工厂的成本优势，让您享受高品质装修服务，无需承担高昂价格。
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">👨‍💼</div>
+            <div>
+              <div class="feature-text-title">年轻团队</div>
+              <div class="feature-text-desc">充满活力与创意，紧跟时下潮流趋势</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✨</div>
+            <div>
+              <div class="feature-text-title">设计领先</div>
+              <div class="feature-text-desc">现代前卫风格，打造独特空间美学</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🏭</div>
+            <div>
+              <div class="feature-text-title">自有工厂</div>
+              <div class="feature-text-desc">木工直接出厂，省去中间商差价</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🏅</div>
+            <div>
+              <div class="feature-text-title">荣誉资质</div>
+              <div class="feature-text-desc">持有CIDB认证，合法合规施工</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🛡️</div>
+            <div>
+              <div class="feature-text-title">6个月保修</div>
+              <div class="feature-text-desc">工程完工后半年内免费维修</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⭐</div>
+            <div>
+              <div class="feature-text-title">质量保证</div>
+              <div class="feature-text-desc">严格把关每个细节，品质值得信赖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="process">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">Our Process</span>
+      <h2 class="section-title">6步装修流程，透明可见</h2>
+      <p class="section-subtitle">
+        从初步咨询到验收交付，每个环节都清晰透明，让您全程掌握进度。
+      </p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <div class="process-title">初步咨询</div>
+        <div class="process-desc">了解需求与预算</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <div class="process-title">现场勘察</div>
+        <div class="process-desc">实地测量评估</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <div class="process-title">设计方案</div>
+        <div class="process-desc">3D效果图呈现</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <div class="process-title">报价确认</div>
+        <div class="process-desc">透明明细报价</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">5</div>
+        <div class="process-title">施工执行</div>
+        <div class="process-desc">专业团队施工</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">6</div>
+        <div class="process-title">验收交付</div>
+        <div class="process-desc">满意后交付使用</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">精选作品展示</h2>
+      <p class="section-subtitle">
+        每一个项目都是我们用心打造的艺术品，点击查看完整案例详情。
+      </p>
+    </div>
+    <div class="portfolio-filters">
+      <button class="filter-btn active">全部作品</button>
+      <button class="filter-btn">现代风格</button>
+      <button class="filter-btn">简约风格</button>
+      <button class="filter-btn">古典风格</button>
+      <button class="filter-btn">工业风格</button>
+    </div>
+
+    <!-- Before / After Comparison -->
+    <div class="portfolio-grid" style="margin-bottom: 2rem;">
+      <div class="portfolio-compare">
+        <div class="compare-side img-placeholder">
+          <span class="compare-label">Before 改造前</span>
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">📷</span>
+            <div>改造前照片</div>
+          </div>
+        </div>
+        <div class="compare-side img-placeholder">
+          <span class="compare-label after">After 改造后</span>
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">✨</span>
+            <div>改造后照片</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Portfolio Item 1 -->
+      <div class="portfolio-item img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🏠</span>
+          <div>项目1图片</div>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">现代风格</span>
+          <h3 class="portfolio-item-title">现代简约公寓</h3>
+          <div class="portfolio-item-sub">吉隆坡 · 1200平方尺</div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div class="portfolio-item img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🏡</span>
+          <div>项目2图片</div>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">简约风格</span>
+          <h3 class="portfolio-item-title">温馨家庭住宅</h3>
+          <div class="portfolio-item-sub">雪兰莪 · 2000平方尺</div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div class="portfolio-item img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🏢</span>
+          <div>项目3图片</div>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">工业风格</span>
+          <h3 class="portfolio-item-title">Loft工业风空间</h3>
+          <div class="portfolio-item-sub">芙蓉 · 1500平方尺</div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 4 (Large) -->
+      <div class="portfolio-item portfolio-item-large img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🖼️</span>
+          <div>精选项目大图</div>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">精选案例</span>
+          <h3 class="portfolio-item-title">豪华别墅全屋定制</h3>
+          <div class="portfolio-item-sub">吉隆坡 · 3500平方尺</div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 5 -->
+      <div class="portfolio-item img-placeholder">
+        <div class="img-placeholder-content">
+          <span class="img-placeholder-icon">🛋️</span>
+          <div>项目5图片</div>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">古典风格</span>
+          <h3 class="portfolio-item-title">古典优雅宅邸</h3>
+          <div class="portfolio-item-sub">吉隆坡 · 2800平方尺</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage Section -->
+<section class="coverage">
+  <div class="section-container">
+    <div class="coverage-grid">
+      <div class="coverage-content">
+        <div class="section-header">
+          <span class="section-label">Service Coverage</span>
+          <h2 class="section-title">服务覆盖范围</h2>
+          <p class="section-subtitle">
+            我们的服务遍及巴生谷及周边地区，为您提供便捷快速的装修服务。
+          </p>
+        </div>
+        <div class="area-tags">
+          <span class="area-tag area-tag-primary">吉隆坡 Kuala Lumpur</span>
+          <span class="area-tag area-tag-primary">雪兰莪 Selangor</span>
+          <span class="area-tag area-tag-primary">芙蓉 Seremban</span>
+          <span class="area-tag">Petaling Jaya</span>
+          <span class="area-tag">Subang Jaya</span>
+          <span class="area-tag">Shah Alam</span>
+          <span class="area-tag">Cheras</span>
+          <span class="area-tag">Kepong</span>
+          <span class="area-tag">Puchong</span>
+          <span class="area-tag">Klang</span>
+        </div>
+        <a href="#contact" class="btn btn-primary">预约免费勘察 →</a>
+      </div>
+      <div class="coverage-image-wrapper">
+        <div class="coverage-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">🗺️</span>
+            <div>服务地图或团队图</div>
+          </div>
+        </div>
+        <div class="coverage-float">
+          <div class="coverage-float-icon">⚡</div>
+          <div>
+            <div class="float-card-title">快速响应</div>
+            <div class="float-card-sub">24小时内联系</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">客户怎么说？</h2>
+      <p class="section-subtitle">
+        来自真实客户的评价，是我们最引以为傲的成绩单。
+      </p>
+    </div>
+    <div class="rating-header">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">等待客户评价填充</span>
+    </div>
+    <div class="testimonials-grid">
+
+      <!-- Testimonial 1 - Empty Frame -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text testimonial-text-placeholder">
+          [在此处填写客户评价内容。客户对我们服务的真实反馈，包括工程质量、服务态度、时间管理等方面的评价]
+        </p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">?</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name" style="color: var(--gray-400); font-style: italic;">客户姓名</div>
+            <div class="testimonial-role">项目类型 · 地点</div>
+          </div>
+          <span class="testimonial-verified">✓ 已验证</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 - Empty Frame -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text testimonial-text-placeholder">
+          [在此处填写客户评价内容。客户对我们服务的真实反馈，包括工程质量、服务态度、时间管理等方面的评价]
+        </p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">?</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name" style="color: var(--gray-400); font-style: italic;">客户姓名</div>
+            <div class="testimonial-role">项目类型 · 地点</div>
+          </div>
+          <span class="testimonial-verified">✓ 已验证</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 - Empty Frame -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text testimonial-text-placeholder">
+          [在此处填写客户评价内容。客户对我们服务的真实反馈，包括工程质量、服务态度、时间管理等方面的评价]
+        </p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">?</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name" style="color: var(--gray-400); font-style: italic;">客户姓名</div>
+            <div class="testimonial-role">项目类型 · 地点</div>
+          </div>
+          <span class="testimonial-verified">✓ 已验证</span>
+        </div>
+      </div>
+
+    </div>
+    <button class="google-button">
+      <span style="color: #4285F4; font-weight: 700;">G</span>
+      <span>在 Google 查看全部评价</span>
+      <span>↗</span>
+    </button>
+  </div>
+</section>
+
+<!-- Articles / Blog Section -->
+<section class="articles" id="articles">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">Articles & Insights</span>
+      <h2 class="section-title">装修知识分享</h2>
+      <p class="section-subtitle">
+        专业装修知识、案例分析与行业趋势，让您装修更省心。
+      </p>
+    </div>
+    <div class="articles-grid">
+
+      <!-- Article 1 - Empty Frame -->
+      <div class="article-card">
+        <div class="article-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">📝</span>
+            <div>文章封面图</div>
+          </div>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">装修指南</span>
+            <span>· 阅读时间 X 分钟</span>
+          </div>
+          <h3 class="article-title article-title-placeholder">[文章标题 1]</h3>
+          <p class="article-excerpt">[文章简介摘要，约2-3行文字描述文章主要内容]</p>
+          <a href="#" class="article-link">阅读全文 →</a>
+        </div>
+      </div>
+
+      <!-- Article 2 - Empty Frame -->
+      <div class="article-card">
+        <div class="article-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">📝</span>
+            <div>文章封面图</div>
+          </div>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">设计灵感</span>
+            <span>· 阅读时间 X 分钟</span>
+          </div>
+          <h3 class="article-title article-title-placeholder">[文章标题 2]</h3>
+          <p class="article-excerpt">[文章简介摘要，约2-3行文字描述文章主要内容]</p>
+          <a href="#" class="article-link">阅读全文 →</a>
+        </div>
+      </div>
+
+      <!-- Article 3 - Empty Frame -->
+      <div class="article-card">
+        <div class="article-image img-placeholder">
+          <div class="img-placeholder-content">
+            <span class="img-placeholder-icon">📝</span>
+            <div>文章封面图</div>
+          </div>
+        </div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">案例分享</span>
+            <span>· 阅读时间 X 分钟</span>
+          </div>
+          <h3 class="article-title article-title-placeholder">[文章标题 3]</h3>
+          <p class="article-excerpt">[文章简介摘要，约2-3行文字描述文章主要内容]</p>
+          <a href="#" class="article-link">阅读全文 →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq" id="faq">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">常见问题解答</h2>
+      <p class="section-subtitle">
+        关于装修流程、报价、保修等常见疑问，这里都有答案。
+      </p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 1 - 例如：装修一般需要多长时间？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题1的详细答案]
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 2 - 例如：如何计算装修费用？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题2的详细答案]
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 3 - 例如：是否提供保修服务？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题3的详细答案]
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 4 - 例如：可以分期付款吗？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题4的详细答案]
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 5 - 例如：服务覆盖哪些地区？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题5的详细答案]
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-placeholder">[常见问题 6 - 例如：施工期间我需要搬出去吗？]</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          [此处填写问题6的详细答案]
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Trust Logos -->
+<section class="trust-logos">
+  <div class="section-container">
+    <p class="logos-label">合作伙伴与认证 · Partners & Certifications</p>
+    <div class="logos-grid">
+      <div class="logo-placeholder">Logo 1</div>
+      <div class="logo-placeholder">Logo 2</div>
+      <div class="logo-placeholder">Logo 3</div>
+      <div class="logo-placeholder">Logo 4</div>
+      <div class="logo-placeholder">Logo 5</div>
+      <div class="logo-placeholder">Logo 6</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="section-container">
+    <div class="contact-grid">
+      <div class="contact-info-side">
+        <div class="section-header">
+          <span class="section-label" style="color: var(--brown-300);">Contact Us</span>
+          <h2 class="section-title">准备开始您的装修？</h2>
+          <p class="section-subtitle">
+            填写右侧表单或通过以下方式联系我们，我们的专业顾问将在24小时内回复您。
+          </p>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <div class="contact-info-label">电话联系</div>
+              <div class="contact-info-value" style="color: var(--gray-500); font-style: italic;">[请填写电话号码]</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <div class="contact-info-label">电子邮箱</div>
+              <div class="contact-info-value" style="color: var(--gray-500); font-style: italic;">[请填写邮箱地址]</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">办公地址</div>
+              <div class="contact-info-value" style="color: var(--gray-500); font-style: italic;">[请填写办公地址]</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <div class="contact-info-label">营业时间</div>
+              <div class="contact-info-value" style="color: var(--gray-500); font-style: italic;">[请填写营业时间]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">姓名 *</label>
+            <input type="text" class="form-input" placeholder="您的姓名" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">联系电话 *</label>
+            <input type="tel" class="form-input" placeholder="+60 12-345 6789" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">电子邮箱</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">项目类型</label>
+            <select class="form-select">
+              <option>请选择</option>
+              <option>全屋装修</option>
+              <option>局部翻新</option>
+              <option>定制木工</option>
+              <option>室内设计</option>
+              <option>商业空间</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">预算范围 (RM)</label>
+            <select class="form-select">
+              <option>请选择</option>
+              <option>10,000 - 30,000</option>
+              <option>30,000 - 50,000</option>
+              <option>50,000 - 100,000</option>
+              <option>100,000 以上</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">留言</label>
+          <textarea class="form-textarea" placeholder="告诉我们您的装修需求与想法..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">提交免费咨询 →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta-container">
+    <div class="cta-badge">
+      <span class="hero-badge-dot"></span>
+      <span>今日可预约 · 快速回复</span>
+    </div>
+    <h2 class="final-cta-title">准备打造您的梦想之家？</h2>
+    <p class="final-cta-sub">
+      专业服务、透明报价、品质保证。加入我们众多满意客户的行列，开启您的装修旅程。
+    </p>
+    <div class="final-cta-buttons">
+      <a href="#" class="btn btn-whatsapp">
+        💬 WhatsApp 立即咨询
+      </a>
+      <a href="#contact" class="btn btn-white">
+        📋 填写咨询表单
+      </a>
+    </div>
+    <div class="final-cta-checks">
+      <div class="hero-check">
+        <span class="check-icon">✓</span>
+        <span>6个月工程保修</span>
+      </div>
+      <div class="hero-check">
+        <span class="check-icon">✓</span>
+        <span>透明报价无隐藏费用</span>
+      </div>
+      <div class="hero-check">
+        <span class="check-icon">✓</span>
+        <span>自有工厂直营</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          John Lim <span class="footer-brand-accent">One Stop</span> Renovation
+        </div>
+        <p class="footer-desc">
+          一站式现代前卫家装专家。我们用更实惠的价格，打造最新潮的居住空间。专业服务覆盖吉隆坡、雪兰莪及芙蓉地区。
+        </p>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span class="footer-contact-item-placeholder">[电话号码]</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span class="footer-contact-item-placeholder">[邮箱地址]</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span class="footer-contact-item-placeholder">[办公地址]</span>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" title="Facebook">f</a>
+          <a href="#" class="footer-social-link" title="Instagram">IG</a>
+          <a href="#" class="footer-social-link" title="WhatsApp">💬</a>
+          <a href="#" class="footer-social-link" title="TikTok">TT</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">服务项目</div>
+        <ul class="footer-links">
+          <li><a href="#services">室内设计</a></li>
+          <li><a href="#services">拆除清理</a></li>
+          <li><a href="#services">水电工程</a></li>
+          <li><a href="#services">石膏天花</a></li>
+          <li><a href="#services">定制木工</a></li>
+          <li><a href="#services">地面墙面</a></li>
+          <li><a href="#services">油漆装饰</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">服务区域</div>
+        <ul class="footer-links">
+          <li><a href="#">吉隆坡 Kuala Lumpur</a></li>
+          <li><a href="#">雪兰莪 Selangor</a></li>
+          <li><a href="#">芙蓉 Seremban</a></li>
+          <li><a href="#">Petaling Jaya</a></li>
+          <li><a href="#">Subang Jaya</a></li>
+          <li><a href="#">Shah Alam</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">公司信息</div>
+        <ul class="footer-links">
+          <li><a href="#why-us">关于我们</a></li>
+          <li><a href="#portfolio">作品展示</a></li>
+          <li><a href="#testimonials">客户评价</a></li>
+          <li><a href="#articles">装修博客</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 John Lim One Stop Renovation. All rights reserved. · CIDB Certified</div>
+      <div class="footer-bottom-links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#" class="floating-whatsapp">
+  <span style="font-size: 1.3rem;">💬</span>
+  <span>WhatsApp 咨询</span>
+</a>
+
+<script>
+  // FAQ Toggle
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      
+      // Open clicked if it wasn't open
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+
+  // Portfolio Filter (demo only)
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Navbar scroll effect
+  let lastScroll = 0;
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 50) {
+      navbar.style.boxShadow = '0 4px 20px rgba(61, 46, 28, 0.08)';
+    } else {
+      navbar.style.boxShadow = 'none';
+    }
+    lastScroll = currentScroll;
+  });
+</script>
+
+</body>
+</html>
